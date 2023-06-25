@@ -1,0 +1,81 @@
+.general-subject {
+  margin-bottom: 55px;
+  &__title {
+    color: $f-color1;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    &:not(:last-child) {
+      border-right: 1px solid $border-color;
+    }
+    &:nth-child(5) {
+      border-right: none;
+    }
+    &:nth-child(n + 6) {
+      border-top: 1px solid $border-color;
+    }
+    &__name {
+      color: #000000;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+
+.accordion-item {
+  background: none;
+  border: none;
+}
+.accordion-button {
+  border: 0;
+  width: 32px;
+  height: 34px;
+}
+.accordion-button:focus {
+  border: 0;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background: none;
+  box-shadow: none;
+}
+.accordion-button.collapsed::after {
+  content: '';
+  width: 32px;
+  height: 34px;
+  background: url('../img/icons/general_subjects/plus.svg') center no-repeat,
+    #e0eef9;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '';
+  width: 32px;
+  height: 34px;
+  background: #e0eef9;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.accordion-header {
+  line-height: 34px;
+}
+
+.accordion-title-wrap {
+  display: flex;
+  gap: 13px;
+}
