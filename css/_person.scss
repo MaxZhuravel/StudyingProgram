@@ -1,6 +1,12 @@
 .person {
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
   &__wrap {
-    margin-left: 594px;
+    margin-left: 50%;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
   &__title {
     margin-bottom: 13px;
@@ -32,6 +38,9 @@
       height: 34px;
       display: inline-block;
     }
+    @media (max-width: 980px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__content {
@@ -44,11 +53,17 @@
     font-size: 16px;
     line-height: 26px;
     width: 506px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   .person__image {
     flex: 0 0 50%;
     img {
       width: 100%;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }

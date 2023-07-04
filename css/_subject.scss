@@ -6,8 +6,22 @@
   align-items: center;
   padding-top: 36px;
   padding-bottom: 30px;
+  @media (max-width: 480px) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
   &__icon {
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      width: 65px;
+      height: 65px;
+    }
+    img {
+      @media (max-width: 768px) {
+        width: 65px;
+        height: 65px;
+      }
+    }
   }
   &__title {
     color: #0ebed9;
@@ -16,6 +30,10 @@
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 13px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 9px;
+    }
   }
   &__subtitle {
     text-align: center;
@@ -23,5 +41,10 @@
     line-height: 24px;
     width: 288px;
     color: $f-color1;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 21px;
+      width: 80%;
+    }
   }
 }
